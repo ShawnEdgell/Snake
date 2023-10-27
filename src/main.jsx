@@ -1,10 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import ReactDOM from 'react-dom/client'; // <-- Update the import path here
+import App from './App.jsx';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+// Get a reference to the root DOM node
+const root = document.getElementById('root');
+
+// Create a root for concurrent mode
+const appRoot = ReactDOM.createRoot(root);
+
+// Render the App component
+appRoot.render(<App />);
